@@ -85,5 +85,17 @@ namespace LinkedListProblem
                 }
             }
         }
+        public void InsertNode(int data, int afterNum)
+        {
+            Node node = new Node(data);
+            Node temp = head;
+            while (temp.data != afterNum)
+            {
+                temp = temp.next;
+            }
+            node.next = temp.next;
+            temp.next = node;
+            Console.WriteLine("Node {0} inserted after {1}.", data, afterNum);
+        }
     }
 }
