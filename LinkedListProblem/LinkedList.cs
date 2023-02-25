@@ -27,7 +27,27 @@ namespace LinkedListProblem
                 temp.next = node;
             }
             Console.WriteLine( "{0} inserted in the Linkedlist",node.data);
-
+        }
+        public void AddFirst(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
+            Console.WriteLine("{0} is added into linked list", newNode.data);
+        }
+        public void Display()
+        {
+            Node temp = this.head;
+            if(temp == null)
+            {
+                Console.WriteLine("Linkedlist is empty");
+            }
+            Console.WriteLine("LinkedList is: ");
+            while(temp != null)
+            {
+                Console.WriteLine(temp.data + " ");
+                temp = temp.next;
+            }
         }
     }
 }
