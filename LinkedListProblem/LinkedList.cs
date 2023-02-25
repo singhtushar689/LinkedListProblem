@@ -97,5 +97,14 @@ namespace LinkedListProblem
             temp.next = node;
             Console.WriteLine("Node {0} inserted after {1}.", data, afterNum);
         }
+        public void RemoveFirstNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linked list is empty");
+            }
+            this.head = this.head.next;
+            Console.WriteLine("First element is deleted successfully");
+        }
     }
 }
