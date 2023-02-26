@@ -15,7 +15,7 @@ namespace LinkedListProblem
             this.top = null;
         }
 
-        public void Push(int data)
+        public void Peek(int data)
         {
             Node node = new Node(data);
             if (this.top == null)
@@ -24,7 +24,6 @@ namespace LinkedListProblem
                 node.next = this.top;
             this.top = node;
             Console.WriteLine(data);
-            //linkedList.Add(data);
         }
 
         public void Display()
@@ -37,6 +36,24 @@ namespace LinkedListProblem
                 temp = temp.next;
             }
             Console.WriteLine();
+        }
+        public void Pop()
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty, deleting is not possible");
+                return;
+            }
+            Console.WriteLine("Value popped is {0}", this.top.data);
+            this.top = this.top.next;
+        }
+        public void IsEmpty()
+        {
+            while (this.top != null)
+            {
+                Pop();
+            }
+            Console.WriteLine("The stack is empty");
         }
     }
 }

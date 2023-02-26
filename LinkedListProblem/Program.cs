@@ -18,7 +18,8 @@ namespace LinkedListProblem
             while (flag)
             {
                 Console.WriteLine("Enter Option Given Below: \n 1.Add SimpleLinkedList \n 2.Create LinkedList By AddingElements" +
-                    "\n 3.Append \n 4.Insert Element \n 5.Delete the node \n 6. Delete Last Node \n 7.Search Node \n 8.Create Stack");
+                    "\n 3.Append \n 4.Insert Element \n 5.Delete the node \n 6. Delete Last Node" +
+                    " \n 7.Search Node \n 8.Create Stack \n 9.Peek and Pop Method in Stack");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -66,10 +67,17 @@ namespace LinkedListProblem
                         linkedList.Search(30);
                         break;
                     case 8:
-                        stack.Push(56);
-                        stack.Push(30);
-                        stack.Push(70);
+                        stack.Peek(56);
+                        stack.Peek(30);
+                        stack.Peek(70);
                         stack.Display();
+                        break;
+                    case 9:
+                        stack.Peek(70);
+                        stack.Peek(30);
+                        stack.Peek(56);
+                        stack.Display();
+                        stack.IsEmpty();
                         break;
                     default:
                         Console.WriteLine("Please Enter Right option");
