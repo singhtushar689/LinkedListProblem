@@ -16,7 +16,7 @@ namespace LinkedListProblem
             while (flag)
             {
                 Console.WriteLine("Enter Option Given Below: \n 1.Add SimpleLinkedList \n 2.Create LinkedList By AddingElements" +
-                    "\n 3.Append \n 4.Insert Element \n 5.Delete the node \n 6. Delete Last Node");
+                    "\n 3.Append \n 4.Insert Element \n 5.Delete the node \n 6. Delete Last Node \n 7.Search Node");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -56,6 +56,12 @@ namespace LinkedListProblem
                         linkedList.Add(70);
                         linkedList.RemoveAtLast();
                         linkedList.Display();
+                        break;
+                    case 7:
+                        linkedList.Add(56);
+                        linkedList.Add(30);
+                        linkedList.Add(70);
+                        linkedList.Search(30);
                         break;
                     default:
                         Console.WriteLine("Please enter right option");

@@ -127,5 +127,28 @@ namespace LinkedListProblem
                 Console.WriteLine("The last node is deleted successfully");
             }
         }
+        public void Search(int searchData)
+        {
+            int count = 0;
+            Node tempNode = this.head;
+            if (tempNode == null)
+                Console.WriteLine("Linke list is empty");
+            else
+            {
+                while (tempNode != null)
+                {
+                    if (tempNode.data.Equals(searchData))
+                    {
+                        count++;
+                    }
+                    tempNode = tempNode.next;
+                }
+            }
+            if (count > 0)
+                Console.WriteLine(searchData + " data found " + count + ": time ");
+            else
+                Console.WriteLine(" Data not found");
+        }
+
     }
 }
