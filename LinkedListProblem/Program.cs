@@ -14,12 +14,14 @@ namespace LinkedListProblem
             Console.WriteLine("Welcome to LinkedList Problems");
             LinkedList linkedList = new LinkedList();
             LinkedListStack stack = new LinkedListStack();
+            LinkedlistQueue queue = new LinkedlistQueue();
             bool flag = true;
             while (flag)
             {
                 Console.WriteLine("Enter Option Given Below: \n 1.Add SimpleLinkedList \n 2.Create LinkedList By AddingElements" +
                     "\n 3.Append \n 4.Insert Element \n 5.Delete the node \n 6. Delete Last Node" +
-                    " \n 7.Search Node \n 8.Create Stack \n 9.Peek and Pop Method in Stack");
+                    " \n 7.Search Node \n 8.Create Stack \n 9.Peek and Pop Method in Stack " +
+                    "\n 10.Enqueue and dequeue in Queue");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -78,6 +80,14 @@ namespace LinkedListProblem
                         stack.Peek(56);
                         stack.Display();
                         stack.IsEmpty();
+                        break;
+                    case 10:
+                        queue.Enqueue(70);
+                        queue.Enqueue(35);
+                        queue.Enqueue(98);
+                        queue.Dequeue();
+                        queue.Display();
+                        
                         break;
                     default:
                         Console.WriteLine("Please Enter Right option");

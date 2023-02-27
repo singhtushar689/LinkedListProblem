@@ -25,7 +25,6 @@ namespace LinkedListProblem
             this.top = node;
             Console.WriteLine(data);
         }
-
         public void Display()
         {
             Node temp = this.top;
